@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lightinnout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3k-l3-OF4" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="172" y="637" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="nPS-5n-eWX"/>
+                                    <constraint firstAttribute="height" constant="30" id="wu5-Wg-JHm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="BallScaleRippleMultiple"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHN-cL-gOD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="617"/>
+                                <state key="normal" image="bulboff"/>
+                                <connections>
+                                    <action selector="btnBulbTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BVa-s4-W5X"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqN-Cf-UhV" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EV9-26-MNr" customClass="AddressView" customModule="lightinnout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="5G2-y0-Ywb"/>
+                                    <constraint firstItem="EV9-26-MNr" firstAttribute="leading" secondItem="ZqN-Cf-UhV" secondAttribute="leading" id="NTc-oM-T1b"/>
+                                    <constraint firstAttribute="trailing" secondItem="EV9-26-MNr" secondAttribute="trailing" id="bdu-es-wrU"/>
+                                    <constraint firstAttribute="bottom" secondItem="EV9-26-MNr" secondAttribute="bottom" id="cdM-Ro-Lbi"/>
+                                    <constraint firstItem="EV9-26-MNr" firstAttribute="top" secondItem="ZqN-Cf-UhV" secondAttribute="top" id="uIy-Al-xbm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GHN-cL-gOD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="45h-xD-BUN"/>
+                            <constraint firstAttribute="trailing" secondItem="ZqN-Cf-UhV" secondAttribute="trailing" id="HNf-28-fcl"/>
+                            <constraint firstItem="ZqN-Cf-UhV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NmG-Ku-ama"/>
+                            <constraint firstItem="GHN-cL-gOD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O0O-Ph-7NN"/>
+                            <constraint firstItem="ZqN-Cf-UhV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZWR-66-uhc"/>
+                            <constraint firstAttribute="trailing" secondItem="GHN-cL-gOD" secondAttribute="trailing" id="fSa-Xz-RuF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O3k-l3-OF4" secondAttribute="bottom" id="ia5-ec-SVD"/>
+                            <constraint firstItem="O3k-l3-OF4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ma5-yS-aaW"/>
+                            <constraint firstItem="O3k-l3-OF4" firstAttribute="top" secondItem="GHN-cL-gOD" secondAttribute="bottom" id="u89-C1-YUs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBulb" destination="GHN-cL-gOD" id="Esn-om-ni7"/>
+                        <outlet property="indicator" destination="O3k-l3-OF4" id="6B8-6S-P9u"/>
+                        <outlet property="springContainer" destination="ZqN-Cf-UhV" id="LCy-Jz-H9Z"/>
+                        <outlet property="viewAddress" destination="EV9-26-MNr" id="WGf-0N-mTa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bulboff" width="238" height="321"/>
+    </resources>
+</document>
